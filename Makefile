@@ -1,2 +1,2 @@
 test1:
-	python tests/var_class.py 
+	python -m tests.simple_test_class.py
