@@ -34,6 +34,9 @@ class Var:
         self._un = self._unit[0]
         self._it = self._unit[1:]
 
+    def __str__(self):
+        return f'{self} = {self._central} +/- {self._error} {self._unit}'
+
     @property
     def central(self):
         return self._central
