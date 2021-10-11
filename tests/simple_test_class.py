@@ -1,9 +1,16 @@
 ''' Simple test on pierre/mainclass.py using basic class and functions
 '''
 
-from .context import pierre
+import unittest
 
-x = pierre.mainclass.Var('7.01 01 mA')
-print(x.central)
-print(x.error)
-print(x.unit)
+from .context import mainclass
+
+class TestVar(unittest.TestCase):
+    ''' Testing class
+    '''
+
+    def _test_print(self):
+        self.assertEqual(str(mainclass.Var('7.0 01 mA')), '7.0 0.1 mA')
+
+if __name__ == '__main__':
+    unittest.main(exit=False)
