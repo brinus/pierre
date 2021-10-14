@@ -1,2 +1,2 @@
 test1:
-	python -m tests.test_Var
+	python3 -m tests.test_Var
